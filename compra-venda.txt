@@ -1,0 +1,135 @@
+
+Esta fórmula serve para pegar o valor de high, low, bid, ask, pc, pcp = cat CTOM.html | tr ' ' '\n' | grep -m1 "pid-1-bid" | cut -d'>' -f2 | sed 's/<.*//'
+
+Esta fórmula captura a sigla da cotação (USD/BRL) = cat CTOM.html | tr ' ' '\n' | grep -B10 "pid-2103-bid" | grep "data-name" | cut -d'"' -f2
+ 
+
+pid-2103-high = Captura o maior valor
+pid-2103-low = Captura o menor valor
+pid-2103-pc = captura a variação
+pid-2103-pcp = captura a variação percentual
+pid-2103-time = captura a ultima hora da atualização da moeda
+
+COMPRA
+pid-1-bid = Compra EUR/USD*
+pid-2-bid = Compra GBP/USD*
+pid-3-bid = Compra USD/JPY
+pid-4-bid = Compra USD/CHF
+pid-5-bid = Compra AUD/USD
+pid-7-bid = Compra USD/CAD
+pid-6-bid = Compra EUR/JPY
+pid-8-bid = Compra NZD/USD
+pid-9-bid = Compra EUR/JPY
+pid-10-bid = Compra EUR/CHF
+pid-11-bid = Compra GBP/JPY
+pid-12-bid = Compra GBP/CHF
+pid-13-bid = Compra CHF/JPY
+pid-14-bid = Compra CAD/CHF
+pid-15-bid = Compra EUR/AUD
+pid-16-bid = Compra EUR/CAD
+pid-17-bid = Compra USD/ZAR
+pid-18-bid = Compra USD/TRY
+pid-39-bid = Compra USD/MXN
+pid-41-bid = Compra USD/SEK
+pid-42-bid = Compra USD/SGD
+pid-43-bid = Compra USD/DKK
+pid-47-bid = Compra AUD/CAD
+pid-48-bid = Compra AUD/CHF
+pid-49-bid = Compra AUD/JPY
+pid-50-bid = Compra AUD/NZD
+pid-51-bid = Compra CAD/JPY
+pid-52-bid = Compra EUR/NZD
+pid-53-bid = Compra GBP/AUD
+pid-54-bid = Compra GBP/CAD
+pid-55-bid = Compra GBP/NZD
+pid-56-bid = Compra NZD/CAD
+pid-57-bid = Compra NZD/CHF
+pid-58-bid = Compra NZD/JPY
+pid-155-bid = Compra USD/HKD
+pid-160-bid = Compra USD/INR
+pid-2103-bid = Compra USD/BRL*
+pid-2111-bid = Compra USD/CNY*
+pid-2186-bid = Compra USD/RUB
+
+VENDA
+pid-1-ask = Venda EUR/USD
+pid-2-ask = Venda GBP/USD
+pid-3-ask = Venda USD/JPY
+pid-4-ask = Venda USD/CHF
+pid-5-ask = Venda AUD/USD
+pid-7-ask = Venda USD/CAD
+pid-6-ask = Venda EUR/JPY
+pid-8-ask = Venda NZD/USD
+pid-9-ask = Venda EUR/JPY
+pid-10-ask = Venda EUR/CHF
+pid-11-ask = Venda GBP/JPY
+pid-12-ask = Venda GBP/CHF
+pid-13-ask = Venda CHF/JPY
+pid-14-ask = Venda CAD/CHF
+pid-15-ask = Venda EUR/AUD
+pid-16-ask = Venda EUR/CAD
+pid-17-ask = Venda USD/ZAR
+pid-18-ask = Venda USD/TRY
+pid-39-ask = Venda USD/MXN
+pid-41-ask = Venda USD/SEK
+pid-42-ask = Venda USD/SGD
+pid-43-ask = Venda USD/DKK
+pid-47-ask = Venda AUD/CAD
+pid-48-ask = Venda AUD/CHF
+pid-49-ask = Venda AUD/JPY
+pid-50-ask = Venda AUD/NZD
+pid-51-ask = Venda CAD/JPY
+pid-52-ask = Venda EUR/NZD
+pid-53-ask = Venda GBP/AUD
+pid-54-ask = Venda GBP/CAD
+pid-55-ask = Venda GBP/NZD
+pid-56-ask = Venda NZD/CAD
+pid-57-ask = Venda NZD/CHF
+pid-58-ask = Venda NZD/JPY
+pid-155-ask = Venda USD/HKD
+pid-160-ask = Venda USD/INR
+pid-2103-ask = Venda USD/BRL
+pid-2111-ask = Venda USD/CNY
+pid-2186-ask = Venda USD/RUB
+
+BOLSA DE VALORES
+sb_last_17920 = IBovespa
+sb_last_941612 = Ibovespa Futuros
+sb_last_8839 = S&P 500 Futuros
+sb_last_8873 = Dow 30 Futuros
+sb_last_44336 = S&P 500 VIX
+
+
+sb_last_8827 = Indice Dolar
+
+COMMODITIES
+sb_last_8833 = Petroleo Brent
+sb_last_8849 = Petroleo WTI
+sb_last_8832 = Café Contrato
+sb_last_8916 = Soja
+sb_last_8894 = Cacau NY
+sb_last_8830 = Ouro
+sb_last_8869 = Açucar NY
+
+
+sb_last_2103 = USD/BRL
+sb_last_1617 = EUR/BRL
+sb_last_1 = EUR/USD
+sb_last_3 = USD/JPY
+sb_last_2 = GBP/USD
+sb_last_1736 = GBP/BRL
+sb_last_1523 = CAD/BRL
+
+MOEDAS VIRTUAIS
+sb_last_945629 = Biticoin / USD
+sb_last_1031068 = IOTA / USD
+sb_last_1024807 = Biticoin / BRL
+sb_last_1024808 = Litecoin / BRL
+sb_last_997650 = Ethereum / USD
+sb_last_1058255 = Bitcoin Cash / USD
+sb_last_1010798 = Litecoin / US
+sb_last_1055949 = Bitcoin FuturoD
+
+sb_last_945629 = ultimo valor registrado da Criptomoeda
+sb_change_945629 = varia absoluta da Criptomoeda
+sb_changepc_945629 = captura a variação da Criptomoeda
